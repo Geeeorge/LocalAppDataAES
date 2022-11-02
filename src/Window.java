@@ -49,8 +49,8 @@ class LoginForm extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent ae)   
     {  
         String userValue = textField1.getText();        
-        String passValue = textField2.getText();       
-          
+        String passValue = textField2.getText();      
+                  
         if (userValue.equals("test") && passValue.equals("test")) {  
               
             MainFrame mf = new MainFrame();  

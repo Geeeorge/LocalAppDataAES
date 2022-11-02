@@ -1,5 +1,6 @@
+import java.io.IOException;
 import java.util.Base64;
-
+import java.io.*;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
@@ -39,15 +40,25 @@ public class AES {
 
     private byte[] decode(String data) { return Base64.getDecoder().decode(data); }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws IOException {
+
         try {
             AES aes = new AES();
             aes.init();
-            String encryptedMessage = aes.encrypt("Hello");
-            String decryptedMessage = aes.decrypt(encryptedMessage);
+            String encryptedMessage = aes.encrypt("yes");
+            String decryptedMessage = aes.decrypt(encryptedMessage); 
 
-            System.err.println("Encrypted message = " + encryptedMessage);
-            System.err.println("Decrypted message = " + decryptedMessage);
+            System.err.println(encryptedMessage);
+            System.err.println(decryptedMessage); 
+
+            File file = new File("loginCache.txt");
+            FileWriter fw = new FileWriter(file);
+            PrintWriter pw = new PrintWriter(fw);
+
+            pw.println(encryptedMessage);    
+    
+            pw.close();
+
             
 
         } catch (Exception ignored) {
