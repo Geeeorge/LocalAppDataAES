@@ -4,6 +4,6 @@ Encrypting login data from a Test GUI of a login page made in Java.
 
 How to install:
 
-git clone https://github.com/Geeeorge/LocalAppDataEncryptions.git
+git clone https://github.com/Geeeorge/https://github.com/Geeeorge/LocalAppDataAES.git
 
-Code < [Open with Github Desktop < Clone < open], [Open with Visual Studio < open], [Download ZIP < Extract zip < Open with prefered IDE < run MainFrame.java]
+Code < [Open with Github Desktop < Clone < open], [Open with Visual Studio < open], [Download ZIP < Extract zip < Open with prefered IDE < run Main.java / run the exectuable files (.jar)]
