@@ -1,9 +1,3 @@
-Local App Data Encryptions:
+AES UTF-8 128 bit Encryptions of data in a test Login GUI.
 
-Encrypting login data from a Test GUI of a login page made in Java.
-
-How to install:
-
-git clone https://github.com/Geeeorge/https://github.com/Geeeorge/LocalAppDataAES.git
-
-Code < [Open with Github Desktop < Clone < open], [Open with Visual Studio < open], [Download ZIP < Extract zip < Open with prefered IDE < run Main.java / run the exectuable files (.jar)]
+Install with git clone/ download zip, extract and run
