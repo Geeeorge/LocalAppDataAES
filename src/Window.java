@@ -2,7 +2,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.lang.Exception;
-import java.util.Scanner;
 
 
 import javax.swing.JButton;

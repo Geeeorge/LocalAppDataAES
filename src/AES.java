@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.util.Base64;
-import java.util.Scanner;
 import java.io.*;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
