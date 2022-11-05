@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.Base64;
+import java.util.Scanner;
 import java.io.*;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -41,11 +42,11 @@ public class AES {
     private byte[] decode(String data) { return Base64.getDecoder().decode(data); }
 
     public static void main(String[] args)  throws IOException {
-
         try {
+            
             AES aes = new AES();
             aes.init();
-            String encryptedMessage = aes.encrypt("yes");
+            String encryptedMessage = aes.encrypt("Jamaal");
             String decryptedMessage = aes.decrypt(encryptedMessage); 
 
             System.err.println(encryptedMessage);
