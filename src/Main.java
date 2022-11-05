@@ -1,3 +1,4 @@
+
 import javax.swing.*;  
   
 class Main extends JFrame  
@@ -9,5 +10,7 @@ class Main extends JFrame
         setTitle("Test");  
         setSize(500, 350);  
     }  
+
+    
 
 }  

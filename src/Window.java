@@ -53,20 +53,17 @@ class LoginForm extends JFrame implements ActionListener
         String userValue = textField1.getText();        
         String passValue = textField2.getText();  
         
-        if (userValue.equals("Jamaal") && passValue.equals("Jamaal")) {  
-            Writer writer = null;
-            try {
-                writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("loginCache.txt"), "utf-8"));
-                writer.write(passValue);
-            } catch (IOException ex) {
-                // TODO: handle exception
-            } finally {
-                try {writer.close();} catch (Exception ex) {/*ignore */}
-            }
-        }  
-        else{  
-            System.out.println("Login failed");  
-        }  
+        
+        Writer writer = null;
+        try {
+            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("loginCache.txt"), "utf-8"));
+            writer.write(passValue);
+        } catch (IOException ex) {
+            // TODO: handle exception
+        } finally {
+            try {writer.close();} catch (Exception ex) {/*ignore */}
+        }
+          
         
     }  
 }  
@@ -75,13 +72,15 @@ class Window
 {    
     public static void main(String arg[]) throws IOException {
 
-
+        
         try  
         {  
             
             LoginForm form = new LoginForm();  
             form.setSize(500,350);  
-            form.setVisible(true);  
+            form.setVisible(true); 
+            AES aes = new AES();
+            aes.main(arg); 
         }  
         catch(Exception e)  
         {     

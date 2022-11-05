@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.Base64;
+import java.util.Scanner;
 import java.io.*;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -45,11 +46,12 @@ public class AES {
             
             AES aes = new AES();
             aes.init();
-            String encryptedMessage = aes.encrypt("Jamaal");
-            String decryptedMessage = aes.decrypt(encryptedMessage); 
+            Scanner input = new Scanner(new File("loginCache.txt"));
+            String encryptedMessage = aes.encrypt(input.nextLine());
+            /* String decryptedMessage = aes.decrypt(encryptedMessage); 
 
             System.err.println(encryptedMessage);
-            System.err.println(decryptedMessage); 
+            System.err.println(decryptedMessage); */
 
             File file = new File("loginCache.txt");
             FileWriter fw = new FileWriter(file);
@@ -58,6 +60,13 @@ public class AES {
             pw.println(encryptedMessage);    
     
             pw.close();
+
+            /*
+            while (input.hasNextLine())
+            {
+            System.out.println(input.nextLine());
+            }
+            */
 
             
 
